@@ -1,41 +1,58 @@
 # fract’ol - Computer Graphics Fractals.
 
-Draws beatiful fractals utilizing MLX42 library.  
-Handles Julia, Mandelbrot and Multibrot sets.  
-Written in C.
+A beautiful fractal renderer built in C using the MLX42 library. This project visualizes a variety of fractals, including the Julia, Mandelbrot, and Multibrot sets.
+
+![julia set](demos/julia.png)
+![julia set](demos/julia2.png)
+![mandelbrot](demos/mandelbrot.png)
+![multibrot](demos/multibrot.png)
 
 ---
+
 ### Install
 
 ```
 git clone https://github.com/julmajustus/fractol.git
-
-make bonus
+cd fractol && make bonus
 ```
 ---
 
 ### Usage
 
+Run the executable with the appropriate arguments to select and customize the fractal you wish to render.
+- Mandelbrot:
 ```
-Correct input for fractol is:
-  ./fractol mandelbrot
-  ./fractol julia x.x x.x
-    (x.x values should be between -2.0 and 2.0)
-
-Controls:
-  General:
-    ESC      - Exit program
-    WASD     - Move the view inside window
-    Mouse    - Scroll to zoom in/out
-    R        - Reset colorset to black/white
-    Space    - Randomize colorset
-
-  Julia set controls:
-    UP/DOWN  - Increase/decrease constants
-    LEFT/RIGHT - Finer increase/decrease constants
+./fractol mandelbrot
 ```
+- Multibrot:
+```
+./fractol multibrot
+```
+- Julia:
+```
+./fractol julia <real_part> <imaginary_part>
+```
+- The <real_part> and <imaginary_part> values should be floating-point numbers between -2.0 and 2.0.
+
+### Example
+To launch the Julia set with custom constants:
+```
+./fractol julia 0.285 0.01
+```
+
 ---
 
-![julia set](demos/julia.png)
-![mandelbrot](demos/mandelbrot.png)
-![multibrot](demos/multibrot.png)
+### Controls
+General Controls
+   - ESC: Exit the program
+   - W, A, S, D: Move the view within the window
+   - Mouse Scroll: Zoom in/out
+   - R: Reset the colorset to the default (black/white)
+   - Space: Randomize the colorset
+
+Julia Set Specific Controls
+
+   - UP/DOWN Arrow Keys: Increase or decrease the constants
+   - LEFT/RIGHT Arrow Keys: Finer adjustments to the constants
+
+
